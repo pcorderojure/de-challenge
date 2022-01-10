@@ -1,7 +1,7 @@
 # Data Engineer - Challenge
 This is my solution for the Basic Challenge for Data Engineers in wallmart.
 
-The Job is an ETL code writed in Java that runs as a batch process.
+The Job is an ETL written in Java that executes on demand.
 
 ## Deployment 
 
