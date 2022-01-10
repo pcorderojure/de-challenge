@@ -6,7 +6,7 @@ The Job is an ETL code writed in Java that runs as a batch process.
 ## Deployment 
 1. Download the repository from the link https://github.com/pcorderojure/de-challenge/tree/master as a zip file
 2. The computer where the ETL is going to run has to have installed java 1.8 or greater
-3. Extract fles in a computer folder
+3. Extract fles in a computer folder and go to the root folder with a command console
 4. Modify the file parameters.config located in the folder "config" and change all the parameters of the MySQL database. Specify the host and port of the database and a user and password with enough privileges to create and delete databases.
 5. When the configuration has been set, run the ETL project from the root folder of the project, following commands:
 - java -jar wm_games.gar
