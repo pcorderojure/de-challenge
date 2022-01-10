@@ -9,7 +9,7 @@ The Job is an ETL code writed in Java that runs as a batch process.
 3. Extract fles in a computer folder and go to the root folder with a command console
 4. Modify the file parameters.config located in the folder "config" and change all the parameters of the MySQL database. Specify the host and port of the database and a user and password with enough privileges to create and delete databases.
 5. When the configuration has been set, run the ETL project from the root folder of the project, following commands:
-- java -jar wm_games.gar
+  - java -jar wm_games.gar
 6. Wait until the proccess finishes
 7. Review all the output of the ETL
 
