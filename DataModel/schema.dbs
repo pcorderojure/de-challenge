@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="wm_games" id="Project-1ed9" database="MySql" >
+	<schema name="wm_games" >
+		<table name="company" generator_rows="100" >
+			<column name="id_company" type="int" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="name_company" type="varchar" length="250" jt="12" mandatory="y" />
+			<index name="pk_company_id_company" unique="PRIMARY_KEY" >
+				<column name="id_company" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="console" generator_rows="150" >
+			<column name="id_console" type="int" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="name_console" type="varchar" length="250" jt="12" mandatory="y" />
+			<column name="id_company" type="int" jt="4" mandatory="y" />
+			<index name="pk_console_id_console" unique="PRIMARY_KEY" >
+				<column name="id_console" />
+			</index>
+			<fk name="fk_console_company" to_schema="wm_games" to_table="company" >
+				<fk_column name="id_company" pk="id_company" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="game" generator_rows="225" >
+			<column name="id_game" type="int" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="name_game" type="varchar" length="250" jt="12" mandatory="y" />
+			<column name="id_console" type="int" jt="4" mandatory="y" />
+			<index name="pk_game_id_game" unique="PRIMARY_KEY" >
+				<column name="id_game" />
+			</index>
+			<fk name="fk_game_console" to_schema="wm_games" to_table="console" >
+				<fk_column name="id_console" pk="id_console" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="score" >
+			<column name="id_score" type="int" jt="4" mandatory="y" />
+			<column name="id_game" type="int" jt="4" mandatory="y" />
+			<column name="metascore" type="double" jt="8" mandatory="y" />
+			<column name="userscore" type="varchar" length="10" jt="12" />
+			<column name="date_score" prior="date" type="date" jt="91" mandatory="y" />
+			<index name="pk_score_id_score" unique="PRIMARY_KEY" >
+				<column name="id_score" />
+			</index>
+			<fk name="fk_score_game" to_schema="wm_games" to_table="game" >
+				<fk_column name="id_game" pk="id_game" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+	</schema>
+	<connector name="MyDb" database="MySql" host="localhost" port="3306" user="root" />
+	<connector name="MySql" database="MySql" driver_class="com.mysql.jdbc.Driver" driver_jar="mysql-connector-java-8.0.23.jar" driver_desc="Standard" host="localhost" port="3306" instance="wm_games" user="root" />
+	<layout name="Parsed Script Layout" id="Layout-18a9" joined_routing="y" show_column_type="y" show_relation="columns" >
+		<comment><![CDATA[wm_games]]></comment>
+		<entity schema="wm_games" name="company" color="C1D8EE" x="48" y="128" />
+		<entity schema="wm_games" name="console" color="C1D8EE" x="400" y="96" />
+		<entity schema="wm_games" name="game" color="C1D8EE" x="752" y="64" />
+		<entity schema="wm_games" name="score" color="C1D8EE" x="1104" y="48" />
+		<query id="Query-d9" name="console" >
+			<query_table schema="wm_games" name="console" alias="c" x="48" y="48" >
+				<column name="id_console" />
+				<column name="name_console" />
+				<column name="id_company" />
+			</query_table>
+		</query>
+		<form name="Report" id="Report-1c6e" template="Page" css="container-fluid" view="frame" >
+			<body name="Body" template="Grid" pos="0,0,0,0,f,f" layout="{{-2},{-2}}" scroll="n" html="n" />
+		</form>
+	</layout>
+</project>
