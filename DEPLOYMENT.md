@@ -37,17 +37,17 @@ NOTE: If MySQL server is located in the same machine where you are going to run 
 8. Review all the output of the ETL
 
 ## Outputs
-- The imput files (consoles.csv and result.csv) have to be located in "data" folder
+- The input files (consoles.csv and result.csv) have to be located in "data" folder
 
-- Log files are generated with each execution of the ETL in "log" folder
+- Log files are generated in "log" folder with each execution of the ETL process
 
-- When records in the input files are discarded because of format errors, these records are informed in the log files, and the records are put in files  "consoles_not_loaded.csv" and" result_not_loaded.csv " inside "data" folder for better analysis.
+- When records in the input files are discarded because of format errors, these records are informed in the log files, and the records are put it in the files  "consoles_not_loaded.csv" and" result_not_loaded.csv" inside "data" folder, for better analysis.
 
-- Reports are generated in "report" folder
+- Reports requested are generated in "report" folder
 
 - The data model in 3NF is located in "DataModel" folder in three formats: 
   -   .png and .jpg as images
-  -   .dbs format for the software DbSchema where the data model was designed, because is an easy to use free tool, but powerful for modelate relational databases
+  -   .dbs format for the software DbSchema where the data model was designed. The software was selected because is an easy to use free tool, but powerful for modelate relational databases
 
 
 
