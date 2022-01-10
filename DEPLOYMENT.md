@@ -15,7 +15,7 @@ The Job is an ETL written in Java that executes on demand.
 
 5. Modify the file parameters.config located in the folder "config", and change all the parameters of the MySQL database. Specify the host and port of the database, and a user and password with enough privileges to create and delete databases. 
 
-   To create MySQL user execute the following commands in MySQL server. If MySQL server is not located in the same machine where the ETL process is going to be run, be sure that the MySQL database engine admits remote user connections. To simplify, the third command assumes that both servers (ETL and MySQL) are located in the subnet 192.168.%. Change these parameters if the subnet is different or ignore the command is MySQL is installed on the same machine where ETL process is going to be run. In real productions systems, this permissions has to be improved for security:
+   To create MySQL user execute the following commands in MySQL server. If MySQL server is not located in the same machine where the ETL process is going to be run, be sure that the MySQL database engine admits remote user connections. To simplify, the fourth command assumes that both servers (ETL and MySQL) are located in the subnet 192.168.%. Change these parameters if the subnet is different or ignore the command is MySQL is installed on the same machine where ETL process is going to be run. In real productions systems, this permissions has to be improved for security:
 
     DROP USER IF EXISTS 'user-name'@'localhost';
 
