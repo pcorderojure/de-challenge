@@ -42,7 +42,7 @@ The Job is an ETL code writed in Java that runs as a batch process.
 
 - Log files are generated in "log" folder with each execution of the ETL process
 
-- When records in the input files are discarded because of format errors, these records are informed in the log files, and the records are put it in the files  "consoles_not_loaded.csv" and" result_not_loaded.csv" inside "data" folder, for better analysis.
+- When records in the input files are discarded because of format errors or other causes, these records are informed in the log files, and the records are put it in the files  "consoles_not_loaded.csv" and" result_not_loaded.csv" inside "data" folder, for better analysis.
 
 - Reports requested are generated in "report" folder
 
