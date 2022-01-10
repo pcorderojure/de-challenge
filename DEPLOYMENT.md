@@ -37,7 +37,7 @@ The Job is an ETL written in Java that executes on demand.
 
 8. Review all the output of the ETL
 
-## Outputs
+## Inputs and Outputs
 - The input files (consoles.csv and result.csv) have to be located in "data" folder
 
 - Log files are generated in "log" folder with each execution of the ETL process
