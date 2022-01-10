@@ -13,7 +13,7 @@ The Job is an ETL written in Java that executes on demand.
 
 4. Extract fles in a computer folder and go to the root folder with a command console
 
-5. Modify the file parameters.config located in the folder "config", and change all the parameters of the MySQL database. Specify the host and port of the database, and a user and password with enough privileges to create and delete databases. 
+5. Modify the file "parameters.config" located in the folder "config", and change all the parameters of the MySQL database. Specify the host and port of the database, and a user and password with enough privileges to create and delete databases. 
 
    To create MySQL user execute the following commands in MySQL server. If MySQL server is not located in the same machine where the ETL process is going to be run, be sure that the MySQL database engine admits remote user connections. To simplify, the fourth command assumes that both servers (ETL and MySQL) are located in the subnet 192.168.%. Change these parameters if the subnet is different or ignore the command is MySQL is installed on the same machine where ETL process is going to be run. In real productions systems, this permissions has to be improved for security:
 
@@ -45,6 +45,9 @@ The Job is an ETL written in Java that executes on demand.
 - When records in the input files are discarded because of format errors or other causes, these records are informed in the log files, and the records are put it in the files  "consoles_not_loaded.csv" and" result_not_loaded.csv" inside "data" folder, for better analysis.
 
 - Reports requested are generated in "report" folder
+
+- Configuration of the process is in the file"parameters.config" under "config" folder
+
 
 ## Data Model
 - The data model in 3NF is located in "DataModel" folder in three formats: 
