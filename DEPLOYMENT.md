@@ -10,9 +10,11 @@ The Job is an ETL code writed in Java that runs as a batch process.
 
 3. Extract fles in a computer folder and go to the root folder with a command console
 
-4. Modify the file parameters.config located in the folder "config" and change all the parameters of the MySQL database. Specify the host and port of the database, and a user and password with enough privileges to create and delete databases. Be sure that the MySQL database engine selected admits remote user connections, and the user has permissions on the host. To simplify, you can give access to the user, executing the following command, where the addresses are in the subnet 192.168.%. In real productions systems, this connection has to be improved for security:
+4. Modify the file parameters.config located in the folder "config" and change all the parameters of the MySQL database. Specify the host and port of the database, and a user and password with enough privileges to create and delete databases. Be sure that the MySQL database engine admits remote user connections, and the user has permissions on the host. To simplify, you can give access to the user, executing the following command, where the addresses of the servers are in the subnet 192.168.%. In real productions systems, this connection has to be improved for security:
 
   - GRANT ALL PRIVILEGES ON *.* TO 'user-name'@'192.168.%' IDENTIFIED BY 'user-password' WITH GRANT OPTION;
+
+NOTE: If MySQL server is located in the same machine where you are going to run the process do not consider the remote configuration.
 
 5. When the configuration has been set, run the ETL project from the root folder of the project, executing the command:
   - java -jar wm_games.jar
