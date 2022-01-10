@@ -18,9 +18,13 @@ The Job is an ETL code writed in Java that runs as a batch process.
 To create MySQL user execute the following commands in MySQL server. If MySQL server is not located in the same machine where the ETL process is going to be run, be sure that the MySQL database engine admits remote user connections. To simplify, the third command assumes that both servers (ETL and MySQL) are located in the subnet 192.168.%. Change these parameters if the subnet is different or ignore the command is MySQL is installed on the same machine where ETL process is going to be run. In real productions systems, this permissions has to be improved for security:
 
 DROP USER IF EXISTS 'user-name'@'localhost';
+
 CREATE USER 'user-name'@'localhost' IDENTIFIED BY 'user-pass';
+
 GRANT ALL PRIVILEGES ON *.* TO 'user-name'@'localhost' IDENTIFIED BY 'user-pass' WITH GRANT OPTION;
+
 GRANT ALL PRIVILEGES ON *.* TO 'user-name'@'192.168.%' IDENTIFIED BY 'user-pass' WITH GRANT OPTION;
+
 FLUSH PRIVILEGES;
 
 NOTE: If MySQL server is located in the same machine where you are going to run the process do not consider the remote configuration.
