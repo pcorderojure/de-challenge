@@ -46,7 +46,7 @@ The Job is an ETL written in Java that executes on demand.
 
 - Reports requested are generated in "report" folder
 
-- Configuration of the process is in the file"parameters.config" under "config" folder
+- Configuration of the process is in the file "parameters.config" in "config" folder
 
 
 ## Data Model
