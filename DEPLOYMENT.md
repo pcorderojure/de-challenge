@@ -15,7 +15,7 @@ The Job is an ETL code writed in Java that runs as a batch process.
   - GRANT ALL PRIVILEGES ON *.* TO 'user-name'@'192.168.%' IDENTIFIED BY 'user-password' WITH GRANT OPTION;
 
 5. When the configuration has been set, run the ETL project from the root folder of the project, executing the command:
-  - java -jar wm_games.gar
+  - java -jar wm_games.jar
 
 6. Wait until the proccess finishes
 
