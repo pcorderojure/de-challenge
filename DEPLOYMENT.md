@@ -11,8 +11,8 @@ The Job is an ETL code writed in Java that runs as a batch proccess.
 - Log files are generated with each execution of the ETL in "log" folder
 - Reports are generated in "report" folder
 - The data model in 3NF is located in "DataModel" folder in three formats: 
--   .png and .jpg as images
--   .dbs format for the software DbSchema where the data model was designed, because is an easy to use free tool, but powerful for modelate relational databases
+  -   .png and .jpg as images
+  -   .dbs format for the software DbSchema where the data model was designed, because is an easy to use free tool, but powerful for modelate relational databases
 
 
 
