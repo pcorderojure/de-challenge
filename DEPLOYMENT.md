@@ -4,7 +4,7 @@ This is my solution for the Basic Challenge for Data Engineers in wallmart.
 The Job is an ETL code writed in Java that runs as a batch process.
 
 ## Deployment 
-1. Download the repository from the link https://github.com/pcorderojure/de-challenge/tree/master
+1. Download the repository from the link https://github.com/pcorderojure/de-challenge/tree/master as a zip file
 2. The computer where the ETL is going to run has to have installed java 1.8 or greater
 3. Extract fles in a computer folder
 4. Modify the file parameters.config located in the folder "config" and change all the parameters of the MySQL database. Specify the host and port of the database and a user and password with enough privileges to create and delete databases.
